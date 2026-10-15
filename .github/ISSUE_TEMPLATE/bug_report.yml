@@ -1,0 +1,65 @@
+name: Bug report
+description: Tell us about a reproducible Meowmancy problem.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping protect the Moon Gate. Do not include passwords, receipts, personal information, or device identifiers.
+  - type: input
+    id: game_version
+    attributes:
+      label: Game version and build
+      placeholder: "Example: 1.0 (12)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and iOS version
+      placeholder: "Example: iPhone 16, iOS 26.0"
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Stage, mode, and wave
+      placeholder: "Example: Emberwood, Campaign, wave 6"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the shortest sequence that causes the problem.
+      placeholder: |
+        1. Open...
+        2. Tap...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or recordings
+      description: Drag files here if they are safe to share publicly.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I restarted the app and confirmed the problem still occurs.
+          required: true
+        - label: I removed personal information from this report and its attachments.
+          required: true

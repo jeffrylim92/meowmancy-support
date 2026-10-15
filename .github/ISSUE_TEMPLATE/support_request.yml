@@ -1,0 +1,45 @@
+name: Support request
+description: Ask for help with Meowmancy or its privacy practices.
+title: "[Support] "
+labels: [support]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We are happy to help. GitHub issues are public, so do not include passwords, receipts, personal information, or device identifiers.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: What do you need help with?
+      options:
+        - Gameplay or progress
+        - Installation or updates
+        - Accessibility or controls
+        - Privacy question
+        - Other support
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: How can we help?
+      description: Describe the question without including private information.
+    validations:
+      required: true
+  - type: input
+    id: game_version
+    attributes:
+      label: Game version and build, if relevant
+      placeholder: "Example: 1.0 (12)"
+  - type: input
+    id: device
+    attributes:
+      label: Device and iOS version, if relevant
+      placeholder: "Example: iPhone 16, iOS 26.0"
+  - type: checkboxes
+    id: privacy_check
+    attributes:
+      label: Public issue check
+      options:
+        - label: I removed personal information from this request and its attachments.
+          required: true
